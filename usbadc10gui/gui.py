@@ -15,6 +15,7 @@ import numpy as np
 import PyQt5.QtCore as qtc
 import usbadc10gui.design as design
 import usbadc10gui.usbadc10 as usbadc10
+from usbadc10gui.version import Version
 import csv
 import serial.tools.list_ports
 from platform import system
@@ -90,6 +91,8 @@ class UsbadcAPP(qt.QMainWindow, design.Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
 
+        self.setWindowTitle(self.windowTitle() + " " + Version.full)
+
         self.timer = qtc.QTimer(self)
         self.timer.setSingleShot(False)
         self.timer.timeout.connect(self.timer_handler_data)
@@ -156,7 +159,7 @@ class UsbadcAPP(qt.QMainWindow, design.Ui_MainWindow):
         self.actionDisconnect.setEnabled(False)
         self.actionStart_stop_recording.setEnabled(False)
         self.actionStart_Stop_getting_data.setEnabled(False)
-        self.setWindowIcon(QtGui.QIcon('usbadc10.ico'))
+        self.setWindowIcon(QtGui.QIcon('UALab.ico'))
 
         self.actionThis_Application.triggered.connect(self.this_app)
         self.connect_button.clicked.connect(self.connection)
@@ -226,7 +229,7 @@ class UsbadcAPP(qt.QMainWindow, design.Ui_MainWindow):
         Simple about))) no more.
         """
         msgbox = qt.QMessageBox()
-        msgbox.setText("This is a simple cross-platform application for the usbadc10 device.\nVersion 1.2.0\n" +
+        msgbox.setText("This is a simple cross-platform application for the usbadc10 device.\n" +
                        "Copyright © 2020 Nikita Presnov\npresnovnikita@yandex.ru")
         msgbox.exec_()
 
