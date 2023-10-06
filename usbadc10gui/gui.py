@@ -53,7 +53,7 @@ class DataUpdater(qtc.QObject):
         """
         Special function to get data.
         """
-        while(self.mainwindow.start_stop_status):
+        while (self.mainwindow.start_stop_status):
             try:
                 time_now = time.time() - self.systimer
                 data = self.mainwindow.device.get_conversion()
