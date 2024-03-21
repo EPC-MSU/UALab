@@ -3,7 +3,10 @@
 ## RU
 
 Графический интерфейс для устройства usbadc10.
-Помимо неё здесь также приложены тесты и тест скорости, по которому оценивалась скорость работы.
+
+![](media/usbadc10_board.jpg)
+
+Помимо программы здесь также приложены тесты и тест скорости, по которому оценивалась скорость работы.
 Для работы у вас также должен стоять интерпретатор питон.
 
 ### Запустить из под корня под Linux
@@ -34,11 +37,12 @@ pip install pyinstaller
 .\release-win64.bat
 ```
 
-![Скриншот совта](screen.png)
+![Скриншот совта](media/ualab_main_window.png)
 
 В некоторых дистрибудивах линукс(kde neon) приложение берёт системную цветовую схему.
 Также при запуске в некоторые дистрибутивы могут потребовать пакет python3-pyqt5.qtsvg.
 Установить sudo apt install python3-pyqt5.qtsvg.
+
 ## EN
 
 Graphical interface for usbadc10 device.
@@ -73,7 +77,7 @@ pip install pyinstaller
 .\release-win64.bat
 ```
 
-![App screenshot](screen.png)
+![App screenshot](media/ualab_main_window.png)
 
 In some Linux distributions (kde neon), the application takes the system color scheme.
 Also, when running on some distributions, the python3-pyqt5.qtsvg package may be required.
